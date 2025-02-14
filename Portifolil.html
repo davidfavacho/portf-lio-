@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - David Favacho</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #141e30, #243b55);
+            color: #fff;
+        }
+
+        header {
+            text-align: center;
+            padding: 3rem 1rem;
+            background: linear-gradient(to right, #06beb6, #48b1bf);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        header h1 {
+            font-size: 4rem;
+            margin: 0;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            animation: fadeInDown 1.5s ease;
+        }
+
+        header p {
+            font-size: 1.5rem;
+            margin: 0.5rem 0;
+            color: #f9f9f9;
+            animation: fadeInUp 1.5s ease;
+        }
+
+        header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-top: 1rem;
+            border: 4px solid #fff;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            padding: 0.7rem 1.5rem;
+            background: #06beb6;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        nav a:hover {
+            background: #48b1bf;
+            transform: scale(1.1);
+        }
+
+        section {
+            max-width: 1000px;
+            margin: 3rem auto;
+            padding: 2rem;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        section h2 {
+            color: #06beb6;
+            text-align: center;
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+            position: relative;
+        }
+
+        section h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: #06beb6;
+            margin: 0.5rem auto 0;
+        }
+
+        section p {
+            line-height: 1.8;
+            text-align: center;
+            color: #ddd;
+        }
+
+        .specialties {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .specialty {
+            background: #141e30;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            width: 250px;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .specialty:hover {
+            transform: translateY(-10px);
+            background: #1f2f45;
+        }
+
+        .specialty img {
+            max-width: 60px;
+            margin-bottom: 1rem;
+        }
+
+        .cta {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .cta a {
+            padding: 1rem 2.5rem;
+            background: #06beb6;
+            color: #fff;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: all 0.3s;
+        }
+
+        .cta a:hover {
+            background: #48b1bf;
+            transform: scale(1.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background: linear-gradient(to right, #06beb6, #48b1bf);
+            margin-top: 3rem;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        footer p {
+            margin: 0;
+            color: #fff;
+        }
+
+        footer a {
+            color: #141e30;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .social-links a {
+            color: #fff;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #06beb6;
+        }
+
+        .hidden-content {
+            display: none;
+            margin-top: 1rem;
+            color: #ddd;
+        }
+
+        .show-more {
+            color: #06beb6;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .specialties {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        /* Responsividade */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Ajusta o tamanho da imagem */
+    header img {
+        width: 180px;
+        height: 180px;
+    }
+
+    /* Ajusta a navegação */
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1rem;
+    }
+
+    .menu {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        text-align: center;
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .menu a {
+        padding: 0.8rem;
+        font-size: 1rem;
+        background: #06beb6;
+        border-radius: 10px;
+    }
+
+    /* Esconde o menu por padrão em telas pequenas */
+    .menu {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 1.8rem;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    /* Quando o menu estiver ativo */
+    .menu.show {
+        display: grid;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>David Favacho</h1>
+        <p>Transformando ideias em realidade digital</p>
+        <img src="itzmauuuroo-hackers-anonymous-hd-wallpaper-d36bf36dadd97bc55fd692e7a84ba848.jpg" alt="Foto de David Favacho">
+        <nav>
+            <a href="#sobre">Sobre</a>
+            <a href="#especialidades">Especialidades</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <section id="sobre">
+        <h2>Quem Sou Eu</h2>
+        <p>Olá! Meu nome é David Favacho, desenvolvedor de software mobile e web com experiência em criação de soluções personalizadas e intuitivas. Possuo também uma forte conexão com a área de gestão e suporte administrativo, graças à minha vivência em sindicatos rurais. Estou em constante busca de aprimorar minhas habilidades e contribuir para projetos inovadores.</p>
+        <span class="show-more" onclick="toggleContent('sobre')">Ver mais</span>
+        <div class="hidden-content" id="sobre-content">
+            <p>Além disso, tenho experiência com ferramentas de automação, integração de sistemas e resolução de problemas técnicos. Com uma abordagem voltada para o resultado, sempre busco aplicar as melhores práticas no desenvolvimento de soluções, garantindo qualidade, eficiência e usabilidade. Meu foco é criar soluções que atendam às necessidades dos usuários e das empresas de forma eficaz e inovadora.</p>
+        </div>
+    </section>
+
+    <section id="especialidades">
+        <h2>Minhas Especialidades</h2>
+        <div class="specialties">
+            <div class="specialty">
+                <img src="https://via.placeholder.com/60" alt="Web Development">
+                <p>Desenvolvimento Web</p>
+            </div>
+            <div class="specialty">
+                <img src="https://via.placeholder.com/60" alt="Mobile Development">
+                <p>Desenvolvimento Mobile</p>
+            </div>
+            <div class="specialty">
+                <img src="https://via.placeholder.com/60" alt="VBA Programming">
+                <p>Programação VBA</p>
+            </div>
+        </div>
+        <span class="show-more" onclick="toggleContent('especialidades')">Ver mais</span>
+        <div class="hidden-content" id="especialidades-content">
+            <p>Minha experiência também inclui automação de processos de negócios, gerenciamento de bancos de dados e desenvolvimento de sistemas personalizados para empresas de diferentes setores. Acredito que a tecnologia deve ser utilizada para melhorar processos, otimizar recursos e criar soluções inovadoras que agreguem valor aos negócios.</p>
+        </div>
+    </section>
+
+    <section id="projetos">
+        <h2>Projetos</h2>
+        <p>Em breve, meus projetos estarão disponíveis aqui. Acompanhe!</p>
+        <span class="show-more" onclick="toggleContent('projetos')">Ver mais</span>
+        <div class="hidden-content" id="projetos-content">
+            <p>Estou trabalhando em diversos projetos que envolvem desenvolvimento de aplicações web, sistemas de automação e soluções mobile. Em breve, compartilharei mais detalhes sobre eles, incluindo códigos-fonte e casos de uso.</p>
+        </div>
+    </section>
+
+    <section id="contato">
+        <h2>Entre em Contato</h2>
+        <div class="social-links">
+            <a href="https://wa.me/seu-numero" target="_blank"><img src="whatsapp-icon.png" alt="WhatsApp" style="width:30px;"></a>
+            <a href="https://www.linkedin.com/in/seu-perfil" target="_blank"><img src="linkedin-icon.png" alt="LinkedIn" style="width:30px;"></a>
+            <a href="https://www.instagram.com/seu-usuario" target="_blank"><img src="instagram-icon.png" alt="Instagram" style="width:30px;"></a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 David Favacho | Desenvolvido com 💻 e ☕</p>
+    </footer>
+
+    <script>
+        function toggleContent(section) {
+            const content = document.getElementById(section + '-content');
+            const showMore = document.querySelector('#' + section + ' .show-more');
+            
+            if (content.style.display === 'block') {
+                content.style.display = 'none';
+                showMore.innerHTML = 'Ver mais';
+            } else {
+                content.style.display = 'block';
+                showMore.innerHTML = 'Ver menos';
+            }
+        }
+    </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const menu = document.querySelector(".menu");
+
+        menuToggle.addEventListener("click", function() {
+            menu.classList.toggle("show");
+        });
+    });
+</script>
+
+</body>
+</html>

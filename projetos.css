@@ -1,0 +1,307 @@
+/* Estilos gerais */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #141e30;
+    color: #fff;
+    line-height: 1.6;
+    animation: fadeIn 2s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: linear-gradient(to right, #06beb6, #48b1bf);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    animation: slideIn 1.5s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+    color: #fff;
+}
+
+header p {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+    color: #e0f7fa;
+}
+
+/* Navegação */
+header nav a {
+    text-decoration: none;
+    color: #fff;
+    padding: 1rem 2rem;
+    background: #06beb6;
+    border-radius: 30px;
+    margin: 0.5rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    background: #48b1bf;
+    transform: scale(1.1);
+}
+
+/* Seção de Projetos */
+section#projetos {
+    max-width: 1000px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    animation: fadeInUp 2s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+section#projetos h2 {
+    color: #06beb6;
+    text-align: center;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+/* Lista de Projetos */
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.project {
+    background: #243b55;
+    padding: 2rem;
+    width: 280px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+    background: #1f2f45;
+    box-shadow: 0 4px 15px rgba(6, 190, 182, 0.5);
+}
+
+.project h3 {
+    color: #fff;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+/* Botão Ver Mais */
+.btn-toggle {
+    background: #06beb6;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-toggle:hover {
+    background: #48b1bf;
+    transform: scale(1.05);
+}
+
+/* Detalhes do Projeto */
+.project-details.hidden {
+    display: none;
+}
+
+.project-details {
+    display: block;
+    margin-top: 1rem;
+    text-align: left;
+}
+
+.project-details p {
+    margin: 1rem 0;
+    color: #ddd;
+    font-size: 1rem;
+}
+
+.project-image,
+.project-video {
+    max-width: 100%;
+    margin: 1rem 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Links dentro dos detalhes */
+.project a {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: #fff;
+    background: #06beb6;
+    border-radius: 20px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.project a:hover {
+    background: #48b1bf;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: linear-gradient(to right, #06beb6, #48b1bf);
+    margin-top: 3rem;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+    animation: slideIn 1.5s ease-out;
+}
+
+footer p {
+    margin: 0;
+    color: #fff;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    /* Ajuste do cabeçalho */
+    .header-content img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .header-text h1 {
+        font-size: 2rem;
+    }
+
+    .header-text p {
+        font-size: 1rem;
+    }
+
+    /* Menu responsivo */
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: rgba(6, 190, 182, 0.95);
+        width: 100%;
+        text-align: center;
+        padding: 1rem 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .menu a {
+        display: block;
+        padding: 1rem;
+        font-size: 1.2rem;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu.show {
+        display: flex;
+    }
+
+    /* Ajuste da seção de projetos */
+    section#projetos {
+        padding: 1.5rem;
+    }
+
+    section#projetos h2 {
+        font-size: 2rem;
+    }
+
+    /* Ajuste da lista de projetos */
+    .project-list {
+        gap: 1.5rem;
+    }
+
+    .project {
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    .btn-toggle {
+        padding: 0.5rem 1rem;
+    }
+
+    /* Ajuste dos detalhes do projeto */
+    .project-details p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .project h3 {
+        font-size: 1.5rem;
+    }
+
+    .project-details p {
+        font-size: 0.85rem;
+    }
+
+    .project {
+        width: 100%;
+        padding: 1rem;
+    }
+}
+header img {
+    width: 120px; /* Ajuste o tamanho conforme necessário */
+    height: 120px; /* Ajuste o tamanho conforme necessário */
+    border-radius: 50%; /* Torna a imagem redonda */
+    object-fit: cover; /* Faz com que a imagem se ajuste ao tamanho sem distorcer */
+    margin-bottom: 1rem; /* Espaço abaixo da imagem */
+}

@@ -1,0 +1,262 @@
+/* Geral */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #141e30;
+    color: #fff;
+    line-height: 1.6;
+    animation: fadeIn 2s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: linear-gradient(to right, #06beb6, #48b1bf);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    animation: slideIn 1.5s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+    color: #fff;
+}
+
+/* Navigation Links */
+header nav a {
+    text-decoration: none;
+    color: #fff;
+    padding: 1rem 2rem;
+    background: #06beb6;
+    border-radius: 30px;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    background: #48b1bf;
+    transform: scale(1.1);
+}
+
+/* Especialidades Section */
+#especialidades {
+    padding: 3rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 2s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+#especialidades h2 {
+    font-size: 2.5rem;
+    color: #06beb6;
+    margin-bottom: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* Especialidades */
+.specialties {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Três colunas */
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.specialty {
+    background: #243b55;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 1s ease-out;
+}
+
+.specialty:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(6, 190, 182, 0.5);
+}
+
+.specialty img {
+    max-width: 60px;
+    margin-bottom: 1rem;
+}
+
+.specialty p {
+    font-size: 1.2rem;
+    color: #ddd;
+    line-height: 1.6;
+}
+
+.specialty .more-info {
+    display: none;
+    font-size: 1rem;
+    color: #bbb;
+    margin-top: 1rem;
+    line-height: 1.4;
+}
+
+.toggle-btn {
+    background-color: #06beb6;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.toggle-btn:hover {
+    background-color: #48b1bf;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: linear-gradient(to right, #06beb6, #48b1bf);
+    margin-top: 3rem;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+    animation: slideIn 1.5s ease-out;
+}
+
+footer p {
+    margin: 0;
+    color: #fff;
+}
+
+/* Media Queries para Responsividade */
+
+/* Para telas pequenas (mobile) */
+@media (max-width: 768px) {
+    #especialidades h2 {
+        font-size: 2rem;
+    }
+
+    .specialties {
+        grid-template-columns: 1fr; /* Uma coluna para telas pequenas */
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header nav a {
+        font-size: 1.2rem;
+        padding: 0.8rem 1.5rem;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: rgba(6, 190, 182, 0.95);
+        width: 100%;
+        text-align: center;
+        padding: 1rem 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        pointer-events: none;
+    }
+
+    .menu a {
+        display: block;
+        padding: 1rem;
+        font-size: 1.2rem;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 2rem;
+        background: none;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .menu.show {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+
+    .specialties {
+        gap: 1rem; /* Reduz o espaço entre os itens */
+    }
+
+    .specialty {
+        padding: 1.5rem; /* Menos padding para telas pequenas */
+    }
+
+    .specialty img {
+        max-width: 50px; /* Ajusta o tamanho das imagens */
+    }
+}
+
+/* Para telas extra pequenas (smartphones em modo retrato) */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem; /* Fontes menores */
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .specialty p {
+        font-size: 1rem; /* Fontes menores nas especialidades */
+    }
+
+    .toggle-btn {
+        padding: 0.4rem 1rem; /* Botão menor */
+    }
+}
+header img {
+    width: 120px; /* Ajuste o tamanho conforme necessário */
+    height: 120px; /* Ajuste o tamanho conforme necessário */
+    border-radius: 50%; /* Torna a imagem redonda */
+    object-fit: cover; /* Faz com que a imagem se ajuste ao tamanho sem distorcer */
+    margin-bottom: 1rem; /* Espaço abaixo da imagem */
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - David Favacho</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="perfil.jpeg" alt="Foto de David Favacho">
+            <div class="header-text">
+                <h1>David Favacho</h1>
+                <p>Transformando ideias em realidade digital</p>
+                <nav>
+                    <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+                    <div class="menu">
+                        <a href="quem-sou-eu.html">Sobre</a>
+                        <a href="minhas-especialidades.html">Especialidades</a>
+                        <a href="projetos.html">Projetos</a>
+                        <a href="contato.html">Contato</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <section id="intro">
+        <h2>Bem-vindo ao meu Portfólio</h2>
+        <p>Explore meu trabalho, minhas habilidades e projetos que fazem a diferença!</p>
+        <a href="projetos.html" class="btn-primary">Veja Meus Projetos</a>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 David Favacho | Desenvolvido com 💻 e ☕</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/davidfavacho" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/davidfavacho" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://wa.me/5591984334827" target="_blank"><i class="fab fa-whatsapp"></i></a> <!-- Substitua pelo seu número de WhatsApp -->
+                <a href="https://www.instagram.com/david.favacho/profilecard/" target="_blank"><i class="fab fa-instagram"></i></a> <!-- Substitua pelo seu usuário do Instagram -->
+            </div>
+            
+        </div>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const menuToggle = document.querySelector(".menu-toggle");
+            const menu = document.querySelector(".menu");
+    
+            menuToggle.addEventListener("click", function() {
+                menu.classList.toggle("show");
+            });
+        });
+    </script>
+    
+</body>
+</html>

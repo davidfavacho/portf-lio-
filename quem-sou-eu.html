@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quem Sou Eu - David Favacho</title>
+    <link rel="stylesheet" href="quem-sou-eu.css">
+</head>
+<body>
+  
+    <header>
+        <div class="header-content">
+            <img src="perfil.jpeg" alt="Foto de David Favacho">
+            <div class="header-text">
+                <h1>David Favacho</h1>
+                <p>Transformando ideias em realidade digital</p>
+                <nav>
+                    <button class="menu-toggle" aria-label="Abrir menu"><i class="fas fa-bars"></i></button>
+                    <div class="menu">
+                        <a href="index.html">Página Inicial</a>                      
+                        <a href="minhas-especialidades.html">Especialidades</a>
+                        <a href="projetos.html">Projetos</a>
+                        <a href="contato.html">Contato</a>
+                  
+                    </div>
+                </nav>
+                
+            </div>
+        </div>
+    </header>
+
+
+
+
+
+    <section id="sobre">
+        <h2>Quem Sou Eu</h2>
+        <p>Olá! Meu nome é David Favacho, sou formado em Sistemas de Informação pela UFRA e atualmente estou me especializando em duas pós-graduações: Engenharia de Software e Engenharia de Redes e Segurança de Dados. Tenho 22 anos e desde o início da minha trajetória acadêmica me identifiquei profundamente com a área de tecnologia, fascinado pelo seu constante crescimento e pelas inúmeras oportunidades de inovação que ela proporciona.</p>
+        
+        <p>Minha escolha por Sistemas de Informação foi motivada pela paixão em resolver problemas e desenvolver soluções tecnológicas que impactam positivamente a vida das pessoas. Ao longo do tempo, venho aprimorando minhas habilidades em diversas tecnologias, como Django, React.js, Python, MySQL, JavaScript, HTML, CSS e Bootstrap. Além disso, possuo conhecimento em VBA, o que me permite criar automações eficientes para otimizar processos e aumentar a produtividade.</p>
+    
+        <p>Atualmente, trabalho como desenvolvedor freelancer, atuando no desenvolvimento de aplicações web e mobile personalizadas. Tenho experiência em colaborar com equipes multidisciplinares, compreendendo as necessidades dos clientes e transformando suas ideias em soluções eficientes. Minha vivência profissional também inclui atuação no setor sindical, onde desenvolvi habilidades de organização, comunicação e trabalho em equipe.</p>
+    
+        <p>Meu objetivo a curto prazo é continuar expandindo meu conhecimento técnico e me envolver em projetos cada vez mais desafiadores. A longo prazo, almejo me especializar ainda mais em tecnologias emergentes e contribuir para o desenvolvimento de soluções inovadoras que possam transformar o mercado e melhorar a vida das pessoas.</p>
+    
+        <p>O que mais me motiva na tecnologia é o poder de transformar ideias em realidade. Estou sempre em busca de novos aprendizados, desafios e oportunidades que me permitam crescer tanto profissionalmente quanto pessoalmente.</p>
+    </section>
+    
+
+    <footer>
+        <p>&copy; 2024 David Favacho | Desenvolvido com 💻 e ☕</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+           const menuToggle = document.querySelector(".menu-toggle");
+           const menu = document.querySelector(".menu");
+       
+           menuToggle.addEventListener("click", function() {
+               menu.classList.toggle("show");
+       
+               // Alterna ícone de menu (hambúrguer ↔ fechar)
+               if (menu.classList.contains("show")) {
+                   menuToggle.innerHTML = '<i class="fas fa-times"></i>'; // Ícone de fechar
+               } else {
+                   menuToggle.innerHTML = '<i class="fas fa-bars"></i>'; // Ícone de menu
+               }
+           });
+       });
+       
+       
+           </script>
+    
+
+</body>
+</html>

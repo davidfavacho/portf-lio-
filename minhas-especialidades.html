@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minhas Especialidades - David Favacho</title>
+    <link rel="stylesheet" href="minhas-especialidades.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <img src="perfil.jpeg" alt="Foto de David Favacho">
+            <div class="header-text">
+                <h1>David Favacho</h1>
+                <p>Transformando ideias em realidade digital</p>
+                <nav>
+                    <button class="menu-toggle" aria-label="Abrir menu"><i class="fas fa-bars"></i></button>
+                    <div class="menu">
+                        <a href="index.html">Página Inicial</a>                      
+                        <a href="quem-sou-eu.html">Sobre</a>
+                        <a href="projetos.html">Projetos</a>
+                        <a href="contato.html">Contato</a>
+                  
+                    </div>
+                </nav>
+                
+            </div>
+        </div>
+    </header>
+
+    <section id="especialidades">
+        <h2>Minhas Especialidades</h2>
+        <div class="specialties">
+            <div class="specialty">
+                <img src="img/dev.png" alt="Web Development">
+                <p>Desenvolvimento Web</p>
+                <p class="more-info">Criação de websites dinâmicos, responsivos e de alta performance, utilizando tecnologias como HTML, CSS, JavaScript, React, e frameworks como Django.</p>
+                <button class="toggle-btn">Ver mais</button>
+            </div>
+            <div class="specialty">
+                <img src="img/mobile.png" alt="Mobile Development">
+                <p>Desenvolvimento Mobile</p>
+                <p class="more-info">Desenvolvimento de aplicativos móveis para Android e iOS, com foco em UX/UI e integração com APIs externas para uma melhor performance.</p>
+                <button class="toggle-btn">Ver mais</button>
+            </div>
+            <div class="specialty">
+                <img src="img/informatica.png" alt="VBA Programming">
+                <p>Informática</p>
+                <p class="more-info">Conhecimento em informática básica e avançada, incluindo hardware, software e troubleshooting.</p>
+                <button class="toggle-btn">Ver mais</button>
+            </div>
+            <div class="specialty">
+                <img src="img/powerbi.png" alt="VBA Programming">
+                <p>Fundamentos de Power BI</p>
+                <p class="more-info">Conhecimento básico em Power BI para análise e visualização de dados, além de modelagem de dados e integração com diferentes fontes de dados.</p>
+                <button class="toggle-btn">Ver mais</button>
+            </div>
+            <div class="specialty">
+                <img src="img/office.png" alt="VBA Programming">
+                <p>Pacote Office</p>
+                <p class="more-info">Conhecimento avançado no Pacote Office, incluindo Excel, Word, PowerPoint, e Outlook.</p>
+                <button class="toggle-btn">Ver mais</button>
+            </div>
+            <div class="specialty">
+                <img src="img/BC.png" alt="VBA Programming">
+                <p>Administração de Banco de Dados</p>
+                <p class="more-info">Experiência em administração de bancos de dados relacionais e não relacionais, como MySQL, PostgreSQL, MongoDB.</p>
+                <button class="toggle-btn">Ver mais</button>
+            </div>
+            <div class="specialty">
+                <img src="img/lgpd.png" alt="VBA Programming">
+                <p>Lei Geral de Proteção de Dados (LGPD)</p>
+                <p class="more-info">Conhecimento sobre a Lei Geral de Proteção de Dados, com foco em implementação e compliance em projetos de TI.</p>
+                <button class="toggle-btn">Ver mais</button>
+            </div>
+            <div class="specialty">
+                <img src="img/segurancainformacao.png" alt="VBA Programming">
+                <p>Segurança da Informação</p>
+                <p class="more-info">Experiência em práticas de segurança da informação, incluindo criptografia, firewalls, políticas de segurança e controle de acesso.</p>
+                <button class="toggle-btn">Ver mais</button>
+            </div>
+            <div class="specialty">
+                <img src="img/FTI.png" alt="VBA Programming">
+                <p>Fundamentos de TI - Hardware e Software</p>
+                <p class="more-info">Conhecimentos básicos em hardware e software, abrangendo desde a instalação até a manutenção de sistemas de TI.</p>
+                <button class="toggle-btn">Ver mais</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 David Favacho | Desenvolvido com 💻 e ☕</p>
+    </footer>
+
+    <script>
+        // Função para alternar a visibilidade do texto adicional
+        const buttons = document.querySelectorAll('.toggle-btn');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                const moreInfo = button.previousElementSibling; // Parágrafo de informações
+                if (moreInfo.style.display === 'block') {
+                    moreInfo.style.display = 'none';
+                    button.textContent = 'Ver mais';
+                } else {
+                    moreInfo.style.display = 'block';
+                    button.textContent = 'Ver menos';
+                }
+            });
+        });
+    </script>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function() {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const menu = document.querySelector(".menu");
+
+    menuToggle.addEventListener("click", function() {
+        menu.classList.toggle("show");
+
+        // Alterna ícone de menu (hambúrguer ↔ fechar)
+        menuToggle.innerHTML = menu.classList.contains("show")
+            ? '<i class="fas fa-times"></i>'
+            : '<i class="fas fa-bars"></i>';
+    });
+});
+
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,214 @@
+/* Estilos gerais */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #141e30;
+    color: #fff;
+    line-height: 1.6;
+    animation: fadeIn 2s ease-out;
+}
+
+/* Animação de fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Cabeçalho */
+header {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: linear-gradient(to right, #06beb6, #48b1bf);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Imagem do perfil */
+.header-content img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+/* Estilizando o título e subtítulo */
+.header-text h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    color: #fff;
+    animation: fadeIn 2s ease-out;
+}
+
+.header-text p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+/* Menu de navegação */
+nav {
+    position: relative;
+}
+
+.menu {
+    display: flex;
+    gap: 1rem;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    background: #06beb6;
+    border-radius: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.menu a:hover {
+    background: #48b1bf;
+    transform: scale(1.1);
+}
+
+/* Botão do menu hamburguer */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Seção "Quem Sou Eu" */
+section#sobre {
+    max-width: 800px;
+    padding: 2rem;
+    margin: 3rem auto;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    animation: fadeInUp 2s ease-out;
+}
+
+/* Animação de fadeInUp */
+@keyframes fadeInUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+section#sobre h2 {
+    font-size: 2.5rem;
+    color: #06beb6;
+    margin-bottom: 1rem;
+}
+
+section#sobre p {
+    font-size: 1.2rem;
+    color: #ddd;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: linear-gradient(to right, #06beb6, #48b1bf);
+    margin-top: 3rem;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+}
+
+footer p {
+    margin: 0;
+    color: #fff;
+}
+
+footer a {
+    color: #141e30;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #06beb6;
+    text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    /* Ajuste do cabeçalho */
+    .header-content img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .header-text h1 {
+        font-size: 2rem;
+    }
+
+    .header-text p {
+        font-size: 1rem;
+    }
+
+    /* Menu responsivo */
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: rgba(6, 190, 182, 0.95);
+        width: 100%;
+        text-align: center;
+        padding: 1rem 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .menu a {
+        display: block;
+        padding: 1rem;
+        font-size: 1.2rem;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu.show {
+        display: flex;
+    }
+
+    /* Ajuste da seção sobre */
+    section#sobre {
+        max-width: 90vw;
+        padding: 1.5rem;
+    }
+
+    section#sobre h2 {
+        font-size: 2rem;
+    }
+
+    section#sobre p {
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - David Favacho</title>
+    <link rel="stylesheet" href="contato.css">
+</head>
+<body>
+   
+    <header>
+        <div class="header-content">
+            <img src="perfil.jpeg" alt="Foto de David Favacho">
+            <div class="header-text">
+                <h1>David Favacho</h1>
+                <p>Transformando ideias em realidade digital</p>
+                <nav>
+                    <button class="menu-toggle" aria-label="Abrir menu"><i class="fas fa-bars"></i></button>
+                    <div class="menu">
+                        <a href="index.html">Página Inicial</a>
+                        <a href="quem-sou-eu.html">Sobre</a>
+                        <a href="minhas-especialidades.html">Especialidades</a>
+                        <a href="projetos.html">Projetos</a>
+                  
+                    </div>
+                </nav>
+                
+            </div>
+        </div>
+    </header>
+
+
+
+
+
+    <section id="contato">
+        <h2>Entre em Contato Comigo</h2>
+        <div class="contact-form">
+            <form action="mailto:davidfavacho.ufra@gmail.com" method="post" enctype="text/plain">
+                <label for="name">Digite Seu Nome:</label>
+                <input type="text" id="name" name="name" required placeholder="David Favacho">
+        
+                <label for="email">Digite Seu Email:</label>
+                <input type="email" id="email" name="email" required placeholder="seuemail@gmail.com">
+        
+                <label for="message">Mensagem</label>
+                <textarea id="message" name="message" rows="5" required placeholder="Olá David, quero falar com você sobre..."></textarea>
+        
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+        </div>
+       
+
+        <div class="social-links">
+            <a href="https://wa.me/5591984334827" target="_blank"><img src="whatsapp-icon.png" alt="WhatsApp" style="width:30px;"></a>
+            <a href="http://linkedin.com/in/davidfavacho" target="_blank"><img src="linkedin-icon.png" alt="LinkedIn" style="width:30px;"></a>
+            <a href="https://github.com/davidfavacho" target="_blank"><img src="git-icon.png" alt="GitHub" style="width:30px;"></a>
+            <a href="https://www.instagram.com/david.favacho/profilecard/" target="_blank"><img src="instagram-icon.png" alt="Instagram" style="width:30px;"></a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 David Favacho | Desenvolvido com 💻 e ☕</p>
+    </footer>
+
+    <script>
+ document.addEventListener("DOMContentLoaded", function() {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const menu = document.querySelector(".menu");
+
+    menuToggle.addEventListener("click", function() {
+        menu.classList.toggle("show");
+
+        // Alterna ícone de menu (hambúrguer ↔ fechar)
+        if (menu.classList.contains("show")) {
+            menuToggle.innerHTML = '<i class="fas fa-times"></i>'; // Ícone de fechar
+        } else {
+            menuToggle.innerHTML = '<i class="fas fa-bars"></i>'; // Ícone de menu
+        }
+    });
+});
+
+
+    </script>
+    
+</body>
+</html>
